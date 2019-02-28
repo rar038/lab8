@@ -1,8 +1,8 @@
 function initCamera() {
   // Uncomment and fill in the correct selectors below.
-  // capture($('<Your code here>'),
-  //        $('<Your code here>'),
-  //        $('<Your code here>'));
+    capture($('#camera-video'),
+          $('#camera-canvas'),
+          $('#camera-button'));
 
   // For Reference:
   // capture($('#camera-video'),
@@ -20,7 +20,7 @@ function capture(video, canvas, snapshotButton) {
   var successCallback = function(mediaStream) {
     //The success callback function. On user click of snapshot button,
     //draw the image on the canvas.
-    // video.attr('src', window.URL.createObjectURL(mediaStream));
+    //video.attr('src', window.URL.createObjectURL(mediaStream));
     var vid = document.querySelector('#camera-video');
     vid.srcObject = mediaStream;
     snapshotButton.click(function(e) {
